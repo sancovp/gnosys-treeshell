@@ -29,6 +29,6 @@ gnosys_treeshell.egg-info/dependency_links.txt
 gnosys_treeshell.egg-info/entry_points.txt
 gnosys_treeshell.egg-info/requires.txt
 gnosys_treeshell.egg-info/top_level.txt
-mcp_server/__init__.py
-mcp_server/agent_server.py
-mcp_server/user_server.py
+gnosys_treeshell/mcp_server/__init__.py
+gnosys_treeshell/mcp_server/agent_server.py
+gnosys_treeshell/mcp_server/user_server.py

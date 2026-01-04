@@ -1,2 +1,2 @@
 [console_scripts]
-gnosys-treeshell = mcp_server.user_server:serve
+gnosys-treeshell = gnosys_treeshell.mcp_server.user_server:serve
