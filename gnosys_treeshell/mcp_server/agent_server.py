@@ -12,26 +12,26 @@ from mcp.server.stdio import stdio_server
 from mcp.types import Tool, TextContent
 from mcp.shared.exceptions import McpError
 
-from custom_treeshell import CustomTreeshellAgentTreeShell
+from gnosys_treeshell import GnosysTreeShell
 
 
 class TreeShellTools(str, Enum):
     RUN_CONVERSATION_SHELL = "run_conversation_shell"
 
 
-class CustomTreeshellAgentMCPServer:
-    """MCP Server for CustomTreeshell AgentTreeShell (restricted)"""
-    
+class GnosysTreeshellAgentMCPServer:
+    """MCP Server for Gnosys TreeShell (MCP Router)"""
+
     def __init__(self):
         self.shell = None
-    
+
     async def run_conversation_shell(self, command: str) -> dict:
         if not self.shell:
             try:
                 if not os.getenv("HEAVEN_DATA_DIR"):
                     os.environ["HEAVEN_DATA_DIR"] = "/tmp/heaven_data"
                     os.makedirs("/tmp/heaven_data", exist_ok=True)
-                self.shell = CustomTreeshellAgentTreeShell()
+                self.shell = GnosysTreeShell()
             except Exception as e:
                 return {"success": False, "error": f"Shell failed to initialize: {e}"}
         
@@ -43,8 +43,8 @@ class CustomTreeshellAgentMCPServer:
 
 
 async def serve() -> None:
-    server = Server("custom_treeshell-agent-shell")
-    shell_server = CustomTreeshellAgentMCPServer()
+    server = Server("gnosys_treeshell-agent-shell")
+    shell_server = GnosysTreeshellAgentMCPServer()
     
     @server.list_tools()
     async def list_tools() -> list[Tool]:

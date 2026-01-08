@@ -1,8 +1,8 @@
 {
-  "app_id": "base_treeshell",
-  "domain": "system",
+  "app_id": "gnosys_treeshell",
+  "domain": "gnosys",
   "role": "assistant",
-  "about_app": "Base TreeShell system configuration",
-  "about_domain": "Core system operations and management",
+  "about_app": "GNOSYS MCP Router TreeShell",
+  "about_domain": "MCP server discovery and execution",
   "system_family": "system"
 }
