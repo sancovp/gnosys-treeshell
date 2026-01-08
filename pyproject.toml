@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gnosys-treeshell"
-version = "0.1.1"
+version = "0.1.2"
 description = "GNOSYS TreeShell MCP - Tree-based navigation REPL for compound intelligence ecosystem"
 readme = "README.md"
 license = "LicenseRef-GPBL-1.0"
