@@ -11,6 +11,7 @@ configs/dev_base_zone_config.json
 configs/dev_user_config.json
 configs/dev_user_shortcuts.json
 configs/dev_user_zone_config.json
+configs/nav_config.json
 configs/system_agent_config.json
 configs/system_agent_shortcuts.json
 configs/system_agent_zone_config.json
