@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gnosys-treeshell"
-version = "0.1.2"
+version = "0.1.3"
 description = "GNOSYS TreeShell MCP - Tree-based navigation REPL for compound intelligence ecosystem"
 readme = "README.md"
 license = "LicenseRef-GPBL-1.0"
@@ -35,7 +35,7 @@ Issues = "https://github.com/sancovp/gnosys-treeshell/issues"
 gnosys-treeshell = "gnosys_treeshell.mcp_server.user_server:serve"
 
 [tool.setuptools.packages.find]
-include = ["gnosys_treeshell*", "configs*", "families*"]
+include = ["gnosys_treeshell*"]
 
 [tool.setuptools.package-data]
-"*" = ["*.yaml", "*.json"]
+"gnosys_treeshell" = ["configs/*.json", "configs/families/*.json", "families/*.json"]
